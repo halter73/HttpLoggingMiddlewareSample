@@ -19,7 +19,7 @@ app.MapGet("/response-logged", () => "Hello world!");
 
 // dbug: Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware[6]
 // Unrecognized Content-Type for body.
-app.MapGet("/response not-logged", (HttpContext context) =>
+app.MapGet("/response-not-logged", (HttpContext context) =>
 {
     context.Response.ContentType = "foo";
     return "Hello World!";
